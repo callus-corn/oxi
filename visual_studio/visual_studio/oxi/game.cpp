@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "DxLib.h"
+#include "sequence.hpp"
 
 oxi::Game::Game()
 {
@@ -18,5 +19,9 @@ oxi::Game::~Game()
 
 void oxi::Game::start() const
 {
-	WaitKey();
+	while (ProcessMessage() == 0) 
+	{
+		sequence.calculateScene();
+		sequence.drawScene();
+	}
 }
