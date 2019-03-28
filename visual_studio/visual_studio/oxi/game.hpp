@@ -1,16 +1,22 @@
 #pragma once
 
-#include "sequence.hpp"
+#include <memory>
+#include "i_game_observer.hpp"
 
 namespace oxi 
 {
-	class Game 
+	class IScene;
+	class ISceneFactory;
+
+	class Game:public IGameObserver 
 	{
 	private:
-		const Sequence sequence{};
+		std::shared_ptr<IScene> scene;
+		std::shared_ptr<ISceneFactory> scene_factory;
 	public:
-		Game();
+		explicit Game(std::shared_ptr<ISceneFactory> constractor_scene_factory);
 		virtual ~Game();
-		void start() const;
+		void start();
+		void update(std::string next_scene_name) override;
 	};
 }

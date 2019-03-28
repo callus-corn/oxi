@@ -125,17 +125,20 @@
   <ItemGroup>
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\main.cpp" />
-    <ClCompile Include="oxi\play_ground_scene.cpp" />
-    <ClCompile Include="oxi\sequence.cpp" />
-    <ClCompile Include="oxi\title_scene.cpp" />
+    <ClCompile Include="oxi\scene\play_ground_scene.cpp" />
+    <ClCompile Include="oxi\scene\scene_factory.cpp" />
+    <ClCompile Include="oxi\scene\title_scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oxi\game.hpp" />
+    <ClInclude Include="oxi\i_game_observer.hpp" />
     <ClInclude Include="oxi\i_scene.hpp" />
+    <ClInclude Include="oxi\i_scene_factory.hpp" />
     <ClInclude Include="oxi\main.hpp" />
-    <ClInclude Include="oxi\play_ground_scene.hpp" />
-    <ClInclude Include="oxi\sequence.hpp" />
-    <ClInclude Include="oxi\title_scene.hpp" />
+    <ClInclude Include="oxi\scene\i_scene_subject.hpp" />
+    <ClInclude Include="oxi\scene\play_ground_scene.hpp" />
+    <ClInclude Include="oxi\scene\scene_factory.hpp" />
+    <ClInclude Include="oxi\scene\title_scene.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
