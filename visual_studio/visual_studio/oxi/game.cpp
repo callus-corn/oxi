@@ -24,12 +24,13 @@ oxi::Game::~Game()
 	DxLib_End();
 }
 
-void oxi::Game::start()
+void oxi::Game::start(std::shared_ptr<IController> controller)
 {
 	scene_factory->setGameObserver(std::static_pointer_cast<IGameObserver>(shared_from_this()));
 	scene = scene_factory->create(first_scene_name);
 	while (ProcessMessage() == 0) 
 	{
+		controller->update();
 		scene->run();
 	}
 }

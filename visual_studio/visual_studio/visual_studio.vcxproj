@@ -123,9 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="oxi\controller\controller.cpp" />
+    <ClCompile Include="oxi\controller\controller.hpp" />
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\main.cpp" />
     <ClCompile Include="oxi\scene\game_object\game_object_factory.cpp" />
+    <ClCompile Include="oxi\scene\game_object\mock_object.cpp" />
     <ClCompile Include="oxi\scene\game_object\title_back.cpp" />
     <ClCompile Include="oxi\scene\play_ground_scene.cpp" />
     <ClCompile Include="oxi\scene\scene_factory.cpp" />
@@ -133,13 +136,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oxi\game.hpp" />
+    <ClInclude Include="oxi\i_controllable.hpp" />
+    <ClInclude Include="oxi\i_controller.hpp" />
     <ClInclude Include="oxi\i_game_observer.hpp" />
     <ClInclude Include="oxi\i_scene.hpp" />
     <ClInclude Include="oxi\i_scene_factory.hpp" />
     <ClInclude Include="oxi\main.hpp" />
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
-    <ClInclude Include="oxi\scene\game_object\i_game_object_observer.hpp" />
     <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />
+    <ClInclude Include="oxi\scene\game_object\mock_object.hpp" />
     <ClInclude Include="oxi\scene\game_object\title_back.hpp" />
     <ClInclude Include="oxi\scene\i_game_object.hpp" />
     <ClInclude Include="oxi\scene\i_game_object_factory.hpp" />

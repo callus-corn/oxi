@@ -7,6 +7,7 @@ namespace oxi
 		class IGameObject
 		{
 		public:
+			virtual ~IGameObject() {}
 			virtual void run() {}
 			virtual void draw() {}
 		};

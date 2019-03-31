@@ -3,6 +3,7 @@
 #include <memory>
 #include <cassert>
 #include "i_game_observer.hpp"
+#include "i_controller.hpp"
 
 namespace oxi 
 {
@@ -17,7 +18,7 @@ namespace oxi
 	public:
 		explicit Game(std::shared_ptr<ISceneFactory> constractor_scene_factory);
 		virtual ~Game();
-		void start();
+		void start(std::shared_ptr<IController> controller);
 		void update(std::string next_scene_name) override;
 	};
 }

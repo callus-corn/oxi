@@ -14,8 +14,8 @@ namespace oxi
 			protected:
 				std::shared_ptr<ISceneObserver> scene_observer;
 			public:
-				IGameObjectSubject(std::shared_ptr<ISceneObserver> constractor_scene_observer):scene_observer(constractor_scene_observer) {}
-				virtual void addObserver() {}
+				virtual ~IGameObjectSubject() {}
+				virtual void setSceneObserver(std::shared_ptr<ISceneObserver> setted_scene_observer) {}
 				virtual void run() {}
 			};
 		}
