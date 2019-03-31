@@ -17,7 +17,7 @@ namespace oxi
 		public:
 			explicit SceneFactory(std::shared_ptr<IGameObjectFactory> constractor_game_object_factory)
 				:game_object_factory(constractor_game_object_factory) {}
-			void initialize(std::shared_ptr<IGameObserver> initial_game_observer);
+			void setGameObserver(std::shared_ptr<IGameObserver> setted_game_observer);
 			std::shared_ptr<IScene> create(std::string scene_name) override;
 		};
 	}

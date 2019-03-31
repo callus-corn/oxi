@@ -9,7 +9,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	auto game_object_factory = std::make_shared <oxi::scene::game_object::GameObjectFactory>();
 	auto scene_factory = std::make_shared<oxi::scene::SceneFactory>(game_object_factory);
 	auto game = std::make_shared<oxi::Game>(std::static_pointer_cast<oxi::ISceneFactory>(scene_factory));
-	scene_factory->initialize(std::static_pointer_cast<oxi::IGameObserver>(game));
 
 	game->start();
 

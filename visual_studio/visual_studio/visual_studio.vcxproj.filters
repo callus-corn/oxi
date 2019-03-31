@@ -23,5 +23,8 @@
     <ClInclude Include="oxi\scene\i_game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\title_back.hpp" />
+    <ClInclude Include="oxi\scene\i_scene_observer.hpp" />
+    <ClInclude Include="oxi\scene\game_object\i_game_object_observer.hpp" />
+    <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />
   </ItemGroup>
 </Project>

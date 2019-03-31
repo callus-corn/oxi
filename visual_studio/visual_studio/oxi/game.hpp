@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <cassert>
 #include "i_game_observer.hpp"
 
 namespace oxi 
@@ -8,7 +9,7 @@ namespace oxi
 	class IScene;
 	class ISceneFactory;
 
-	class Game:public IGameObserver 
+	class Game:public IGameObserver ,public std::enable_shared_from_this<Game>
 	{
 	private:
 		std::shared_ptr<IScene> scene;

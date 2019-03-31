@@ -26,6 +26,7 @@ oxi::Game::~Game()
 
 void oxi::Game::start()
 {
+	scene_factory->setGameObserver(std::static_pointer_cast<IGameObserver>(shared_from_this()));
 	scene = scene_factory->create(first_scene_name);
 	while (ProcessMessage() == 0) 
 	{
