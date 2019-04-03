@@ -145,6 +145,7 @@
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />
     <ClInclude Include="oxi\scene\game_object\mock_object.hpp" />
+    <ClInclude Include="oxi\scene\game_object\position.hpp" />
     <ClInclude Include="oxi\scene\game_object\title_back.hpp" />
     <ClInclude Include="oxi\scene\i_game_object.hpp" />
     <ClInclude Include="oxi\scene\i_game_object_factory.hpp" />

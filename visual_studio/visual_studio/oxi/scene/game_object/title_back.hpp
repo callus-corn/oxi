@@ -3,7 +3,11 @@
 #include "../../i_controllable.hpp"
 #include "../i_game_object.hpp"
 #include "i_game_object_subject.hpp"
+#include "position.hpp"
 #include <string>
+
+using Sound = int;
+using Image = int;
 
 namespace oxi 
 {
@@ -14,8 +18,9 @@ namespace oxi
 			class TitleBack :public IGameObject, public IControllable,public IGameObjectSubject
 			{
 			private:
-				int hoge;
-				int fuga;
+				Sound sound;
+				Image image;
+				Position position;
 			public:
 				TitleBack();
 				void setSceneObserver(std::shared_ptr<ISceneObserver> setted_scene_observer) override { scene_observer = setted_scene_observer; }

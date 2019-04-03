@@ -31,5 +31,6 @@
     <ClInclude Include="oxi\i_controller.hpp" />
     <ClInclude Include="oxi\i_controllable.hpp" />
     <ClInclude Include="oxi\scene\game_object\mock_object.hpp" />
+    <ClInclude Include="oxi\scene\game_object\position.hpp" />
   </ItemGroup>
 </Project>
