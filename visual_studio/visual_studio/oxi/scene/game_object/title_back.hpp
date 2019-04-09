@@ -3,7 +3,7 @@
 #include "../../i_controllable.hpp"
 #include "../i_game_object.hpp"
 #include "i_game_object_subject.hpp"
-#include "position.hpp"
+#include "collision_detection.hpp"
 #include <string>
 
 using Sound = int;
@@ -20,12 +20,12 @@ namespace oxi
 			private:
 				Sound sound;
 				Image image;
-				Position position;
+				std::shared_ptr<CollisionDetection> collision_detection;
 			public:
 				TitleBack();
 				void setSceneObserver(std::shared_ptr<ISceneObserver> setted_scene_observer) override { scene_observer = setted_scene_observer; }
-				void run() override {};
 				void draw() override;
+				std::shared_ptr<ICollisionDetection> getCollisionDetection() override { return collision_detection; }
 				void update(std::map<Key,Frame> input) override;
 			};
 		}

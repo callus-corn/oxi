@@ -128,7 +128,9 @@
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\main.cpp" />
     <ClCompile Include="oxi\scene\game_object\game_object_factory.cpp" />
+    <ClCompile Include="oxi\scene\game_object\mock_ground.cpp" />
     <ClCompile Include="oxi\scene\game_object\mock_object.cpp" />
+    <ClCompile Include="oxi\scene\game_object\object_classification.cpp" />
     <ClCompile Include="oxi\scene\game_object\title_back.cpp" />
     <ClCompile Include="oxi\scene\play_ground_scene.cpp" />
     <ClCompile Include="oxi\scene\scene_factory.cpp" />
@@ -142,11 +144,15 @@
     <ClInclude Include="oxi\i_scene.hpp" />
     <ClInclude Include="oxi\i_scene_factory.hpp" />
     <ClInclude Include="oxi\main.hpp" />
+    <ClInclude Include="oxi\scene\game_object\collision_detection.hpp" />
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />
+    <ClInclude Include="oxi\scene\game_object\mock_ground.hpp" />
     <ClInclude Include="oxi\scene\game_object\mock_object.hpp" />
+    <ClInclude Include="oxi\scene\game_object\object_classification.hpp" />
     <ClInclude Include="oxi\scene\game_object\position.hpp" />
     <ClInclude Include="oxi\scene\game_object\title_back.hpp" />
+    <ClInclude Include="oxi\scene\i_collision_detection.hpp" />
     <ClInclude Include="oxi\scene\i_game_object.hpp" />
     <ClInclude Include="oxi\scene\i_game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\i_scene_observer.hpp" />

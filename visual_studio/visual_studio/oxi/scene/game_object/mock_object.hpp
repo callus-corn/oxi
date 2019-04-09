@@ -5,7 +5,9 @@
 #include "../i_game_object.hpp"
 #include "../i_scene_observer.hpp"
 #include "i_game_object_subject.hpp"
-#include "position.hpp"
+#include "collision_detection.hpp"
+#include "object_classification.hpp"
+#include <vector>
 
 using Sound = int;
 using Image = int;
@@ -21,11 +23,15 @@ namespace oxi
 			private:
 				Sound sound;
 				Image image;
-				Position position;
+				std::shared_ptr<CollisionDetection> collision_detection;
+				std::vector<Kind> collision_kinds{};
 			public:
 				MockObject();
 				void setSceneObserver(std::shared_ptr<ISceneObserver> setted_scene_observer) override { scene_observer = setted_scene_observer; }
 				void run() override;
+				void collisionDetect(std::shared_ptr<ICollisionDetection> obstacle_collision_detection) override;
+				void collision() override;
+				std::shared_ptr<ICollisionDetection> getCollisionDetection() override { return collision_detection; }
 				void draw() override;
 				void update(std::map<Key, Frame> input) override;
 			};

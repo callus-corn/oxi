@@ -235,8 +235,3 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-
-#Resource
-*.mp3
-*.png
-*.jpg
