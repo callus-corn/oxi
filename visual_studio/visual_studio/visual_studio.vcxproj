@@ -128,6 +128,7 @@
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\main.cpp" />
     <ClCompile Include="oxi\scene\game_object\game_object_factory.cpp" />
+    <ClCompile Include="oxi\scene\game_object\mock_enemy.cpp" />
     <ClCompile Include="oxi\scene\game_object\mock_ground.cpp" />
     <ClCompile Include="oxi\scene\game_object\mock_object.cpp" />
     <ClCompile Include="oxi\scene\game_object\object_classification.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="oxi\scene\game_object\collision_detection.hpp" />
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />
+    <ClInclude Include="oxi\scene\game_object\mock_enemy.hpp" />
     <ClInclude Include="oxi\scene\game_object\mock_ground.hpp" />
     <ClInclude Include="oxi\scene\game_object\mock_object.hpp" />
     <ClInclude Include="oxi\scene\game_object\object_classification.hpp" />

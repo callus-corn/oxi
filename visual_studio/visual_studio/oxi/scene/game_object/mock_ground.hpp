@@ -3,9 +3,6 @@
 #include "collision_detection.hpp"
 #include "../i_game_object.hpp"
 
-using Sound = int;
-using Image = int;
-
 namespace oxi
 {
 	namespace scene

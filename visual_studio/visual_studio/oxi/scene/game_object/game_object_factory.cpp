@@ -2,6 +2,7 @@
 #include "title_back.hpp"
 #include "mock_object.hpp"
 #include "mock_ground.hpp"
+#include "mock_enemy.hpp"
 #include <algorithm>
 
 std::vector<std::shared_ptr<oxi::scene::IGameObject>> oxi::scene::game_object::GameObjectFactory::create(std::string scene_name)
@@ -23,7 +24,8 @@ std::vector<std::shared_ptr<oxi::scene::IGameObject>> oxi::scene::game_object::G
 		game_objects = std::vector<std::shared_ptr<IGameObject>>
 		{
 			std::static_pointer_cast<IGameObject>(controllable),
-			std::static_pointer_cast<IGameObject>(std::make_shared<MockGround>())
+			std::static_pointer_cast<IGameObject>(std::make_shared<MockGround>()),
+			std::static_pointer_cast<IGameObject>(std::make_shared<MockEnemy>())
 		};
 		return game_objects;
 	}
@@ -34,7 +36,8 @@ std::vector<std::shared_ptr<oxi::scene::IGameObject>> oxi::scene::game_object::G
 		game_objects = std::vector<std::shared_ptr<IGameObject>>
 		{
 			std::static_pointer_cast<IGameObject>(controllable),
-			std::static_pointer_cast<IGameObject>(std::make_shared<MockGround>())
+			std::static_pointer_cast<IGameObject>(std::make_shared<MockGround>()),
+			std::static_pointer_cast<IGameObject>(std::make_shared<MockEnemy>())
 		};
 		return game_objects;
 	}

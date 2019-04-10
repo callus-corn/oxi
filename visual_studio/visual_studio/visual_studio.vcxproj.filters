@@ -13,6 +13,7 @@
     <ClCompile Include="oxi\controller\controller.hpp" />
     <ClCompile Include="oxi\scene\game_object\mock_ground.cpp" />
     <ClCompile Include="oxi\scene\game_object\object_classification.cpp" />
+    <ClCompile Include="oxi\scene\game_object\mock_enemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oxi\game.hpp" />
@@ -38,5 +39,6 @@
     <ClInclude Include="oxi\scene\game_object\object_classification.hpp" />
     <ClInclude Include="oxi\scene\i_collision_detection.hpp" />
     <ClInclude Include="oxi\scene\game_object\collision_detection.hpp" />
+    <ClInclude Include="oxi\scene\game_object\mock_enemy.hpp" />
   </ItemGroup>
 </Project>

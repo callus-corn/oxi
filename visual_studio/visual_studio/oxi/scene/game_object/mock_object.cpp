@@ -7,7 +7,7 @@ namespace
 	static const Kind kind = oxi::scene::game_object::ObjectClassification::player;
 	static const int collision_detection_x_length = 100;
 	static const int collision_detection_y_length = 100;
-	static const oxi::scene::game_object::Position initial_position(1280/2 -100,720/2 -100);
+	static const oxi::scene::game_object::Position initial_position(1280/4 -100,720/2 -100);
 }
 
 namespace
