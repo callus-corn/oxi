@@ -22,6 +22,7 @@ namespace oxi
 				game_objects(constractor_game_objects){}
 			void run() override;
 			void update(std::string next_scene_name) override { game_observer->update(next_scene_name); }
+			void addGameObject(std::shared_ptr<IGameObject> game_object) override { game_objects.push_back(game_object); }
 		};
 	}
 }

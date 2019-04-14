@@ -19,7 +19,7 @@ namespace
 oxi::scene::game_object::MockEnemy::MockEnemy()
 	:collision_detection(std::make_shared<CollisionDetection>(kind, collision_detection_x_length, collision_detection_y_length, initial_position))
 {
-	image = LoadGraph("resources/none.png");
+	image = LoadGraph("resources/none_enemy.png");
 }
 
 void oxi::scene::game_object::MockEnemy::run()
@@ -53,9 +53,9 @@ void oxi::scene::game_object::MockEnemy::collision()
 		{
 			collision_detection->addY(-gravity);
 		}
-		if (obstacle_kind == oxi::scene::game_object::ObjectClassification::player)
+		if (obstacle_kind == oxi::scene::game_object::ObjectClassification::bullet)
 		{
-			collision_detection->moveTo(initial_x,1480);
+			disposable = true;
 		}
 	}
 	std::vector<Kind> reset{};

@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{3E8F9C22-93C7-4640-A7D5-FC5EA53AE031}</ProjectGuid>
     <RootNamespace>visualstudio</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -127,6 +127,7 @@
     <ClCompile Include="oxi\controller\controller.hpp" />
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\main.cpp" />
+    <ClCompile Include="oxi\scene\game_object\bullet.cpp" />
     <ClCompile Include="oxi\scene\game_object\game_object_factory.cpp" />
     <ClCompile Include="oxi\scene\game_object\mock_enemy.cpp" />
     <ClCompile Include="oxi\scene\game_object\mock_ground.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="oxi\i_scene.hpp" />
     <ClInclude Include="oxi\i_scene_factory.hpp" />
     <ClInclude Include="oxi\main.hpp" />
+    <ClInclude Include="oxi\scene\game_object\bullet.hpp" />
     <ClInclude Include="oxi\scene\game_object\collision_detection.hpp" />
     <ClInclude Include="oxi\scene\game_object\game_object_factory.hpp" />
     <ClInclude Include="oxi\scene\game_object\i_game_object_subject.hpp" />

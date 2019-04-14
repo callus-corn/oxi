@@ -19,6 +19,7 @@ namespace oxi
 			virtual void collision() {}
 			virtual std::shared_ptr<ICollisionDetection> getCollisionDetection() = 0;
 			virtual void draw() {}
+			virtual bool isDisposable() = 0;
 		};
 	}
 }

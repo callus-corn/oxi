@@ -27,6 +27,7 @@ namespace oxi
 				void draw() override;
 				std::shared_ptr<ICollisionDetection> getCollisionDetection() override { return collision_detection; }
 				void update(std::map<Key,Frame> input) override;
+				bool isDisposable() override { return false; }
 			};
 		}
 	}

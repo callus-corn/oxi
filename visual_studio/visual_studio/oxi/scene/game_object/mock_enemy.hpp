@@ -18,6 +18,7 @@ namespace oxi
 				Image image;
 				std::shared_ptr<CollisionDetection> collision_detection;
 				std::vector<Kind> collision_kinds{};
+				bool disposable{false};
 			public:
 				MockEnemy();
 				void run() override;
@@ -25,6 +26,7 @@ namespace oxi
 				void collision() override;
 				std::shared_ptr<ICollisionDetection> getCollisionDetection() override { return collision_detection; }
 				void draw() override;
+				bool isDisposable() override { return disposable; }
 			};
 		}
 	}

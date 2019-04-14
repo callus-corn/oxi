@@ -1,4 +1,5 @@
 #include "mock_object.hpp"
+#include "bullet.hpp"
 #include "Dxlib.h"
 #include <memory>
 
@@ -63,9 +64,13 @@ void oxi::scene::game_object::MockObject::draw()
 
 void oxi::scene::game_object::MockObject::update(std::map<Key, Frame> input)
 {
-	if (input.at(KEY_INPUT_X) > 0)
+	if (input.at(KEY_INPUT_T) > 0)
 	{
 		scene_observer->update("title");
+	}
+	if (input.at(KEY_INPUT_Z) == 1) 
+	{
+		scene_observer->addGameObject(std::make_shared<Bullet>(collision_detection));
 	}
 	if (input.at(KEY_INPUT_RIGHT) > 0) 
 	{
