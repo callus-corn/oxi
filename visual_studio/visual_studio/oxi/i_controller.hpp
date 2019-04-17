@@ -1,7 +1,6 @@
 #pragma once
 
-#include <memory>
-#include "i_controllable.hpp"
+#include <map>
 
 namespace oxi 
 {
@@ -9,6 +8,6 @@ namespace oxi
 	{
 	public:
 		virtual void update() {}
-		virtual void setControllable(std::shared_ptr<IControllable> setted_controllable) {}
+		virtual std::map<int,int> getInput() = 0;
 	};
 }

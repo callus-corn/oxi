@@ -9,11 +9,10 @@ namespace oxi
 		class Controller :public IController
 		{
 		private:
-			std::map<Key, Frame> key_map{};
-			std::shared_ptr<IControllable> controllable;
+			std::map<int, int> key_map_{};
 		public:
 			void update() override;
-			void setControllable(std::shared_ptr<IControllable> setted_controllable) override { controllable = setted_controllable; }
+			std::map<int, int> getInput() { return key_map_; }
 		};
 	}
 }

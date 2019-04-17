@@ -1,23 +1,23 @@
 #pragma once
 
 #include "../i_scene_factory.hpp"
-#include "../i_game_observer.hpp"
 
 namespace oxi 
 {
 	namespace scene 
 	{
-		class IGameObjectFactory;
+		class ISpawnFactory;
+		class IGateFactory;
 
 		class SceneFactory :public ISceneFactory
 		{
 		private:
-			std::shared_ptr<IGameObserver> game_observer;
-			std::shared_ptr<IGameObjectFactory> game_object_factory;
+			std::shared_ptr<ISpawnFactory> spawn_factory_;
+			std::shared_ptr<IGateFactory> gate_factory_;
 		public:
-			explicit SceneFactory(std::shared_ptr<IGameObjectFactory> constractor_game_object_factory)
-				:game_object_factory(constractor_game_object_factory) {}
-			void setGameObserver(std::shared_ptr<IGameObserver> setted_game_observer);
+			explicit SceneFactory(std::shared_ptr<ISpawnFactory> spawn_factory, std::shared_ptr<IGateFactory> gate_factory)
+				:spawn_factory_(spawn_factory),
+				gate_factory_(gate_factory){}
 			std::shared_ptr<IScene> create(std::string scene_name) override;
 		};
 	}

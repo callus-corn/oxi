@@ -1,28 +1,29 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 #include "../i_scene.hpp"
-#include "i_scene_subject.hpp"
-#include "i_game_object.hpp"
-#include "i_scene_observer.hpp"
 
 namespace oxi 
 {
 	namespace scene 
 	{
-		class PlayGroundScene :public IScene ,public ISceneSubject,public ISceneObserver
+		class ISpawn;
+		class IObject;
+		class IGate;
+
+		class PlayGroundScene :public IScene
 		{
 		private:
-			std::vector<std::shared_ptr<IGameObject>> game_objects;
+			std::vector<std::shared_ptr<ISpawn>> spawns_;
+			std::vector<std::shared_ptr<IGate>> gates_;
+			std::vector<std::shared_ptr<IObject>> objects_{};
+			std::string next_scene_name{};
 		public:
-			explicit PlayGroundScene(
-				std::shared_ptr<IGameObserver> constractor_game_observer,
-				std::vector<std::shared_ptr<IGameObject>> constractor_game_objects)
-				:ISceneSubject(constractor_game_observer) ,
-				game_objects(constractor_game_objects){}
+			explicit PlayGroundScene(std::vector<std::shared_ptr<ISpawn>> spawns, std::vector<std::shared_ptr<IGate>> gates);
 			void run() override;
-			void update(std::string next_scene_name) override { game_observer->update(next_scene_name); }
-			void addGameObject(std::shared_ptr<IGameObject> game_object) override { game_objects.push_back(game_object); }
+			bool isStopped() override { return !next_scene_name.empty(); }
+			std::string getNextSceneName() override { return next_scene_name; }
 		};
 	}
 }

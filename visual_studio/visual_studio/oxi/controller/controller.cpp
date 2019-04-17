@@ -10,14 +10,11 @@ void oxi::controller::Controller::update()
 	{
 		if (key[i] == 1) 
 		{
-			key_map[i] += 1;
+			key_map_[i] += 1;
 		}
 		else 
 		{
-			key_map[i] = 0;
+			key_map_[i] = 0;
 		}
 	}
-
-	controllable->update(key_map);
-
 }

@@ -1,22 +1,19 @@
 #include "game.hpp"
+#include "DxLib.h"
+#include "game_const.hpp"
 #include "i_scene_factory.hpp"
 #include "i_scene.hpp"
-#include "DxLib.h"
+#include "i_controller.hpp"
+#include "scene/scene_const.hpp"
 
-namespace 
+oxi::Game::Game(std::shared_ptr<ISceneFactory> scene_factory, std::shared_ptr<IController> controller)
+	:scene_factory_(scene_factory),
+	controller_(controller)
 {
-	const std::string first_scene_name = "title";
-}
-
-oxi::Game::Game(std::shared_ptr<ISceneFactory> constractor_scene_factory)
-	:scene_factory(constractor_scene_factory)
-{
-	SetMainWindowText("oxi");
+	SetMainWindowText(oxi::GameConst::title_name);
 	ChangeWindowMode(TRUE);
-	SetGraphMode(1280, 720, 32);
+	SetGraphMode(oxi::GameConst::window_x, oxi::GameConst::window_y, oxi::GameConst::color_depth);
 	SetWindowSizeChangeEnableFlag(FALSE);
-
-	if (DxLib_Init() == -1) { return; }
 }
 
 oxi::Game::~Game() 
@@ -24,18 +21,19 @@ oxi::Game::~Game()
 	DxLib_End();
 }
 
-void oxi::Game::start(std::shared_ptr<IController> controller)
+void oxi::Game::start()
 {
-	scene_factory->setGameObserver(std::static_pointer_cast<IGameObserver>(shared_from_this()));
-	scene = scene_factory->create(first_scene_name);
+	if (DxLib_Init() == -1) { return; }
+
+	std::shared_ptr<IScene> scene = scene_factory_->create(oxi::scene::SceneConst::title_scene_name);
+
 	while (ProcessMessage() == 0) 
 	{
-		controller->update();
+		controller_->update();
 		scene->run();
+		if (scene->isStopped())
+		{
+			scene = scene_factory_->create(scene->getNextSceneName());
+		}
 	}
-}
-
-void oxi::Game::update(std::string nextSceneName)
-{
-	scene = scene_factory->create(nextSceneName);
 }
