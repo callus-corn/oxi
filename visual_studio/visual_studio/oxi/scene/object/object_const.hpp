@@ -9,6 +9,7 @@ namespace oxi
 			struct ObjectConst
 			{
 				static const int gravity;
+				static const int jump_verocity;
 				static const int move_speed;
 				static const int unit_x;
 				static const int unit_y;

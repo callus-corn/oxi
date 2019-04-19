@@ -18,6 +18,7 @@ namespace oxi
 			private:
 				int image_;
 				int kind_;
+				int frame_{0};
 				std::shared_ptr<IPosition> position_;
 				std::shared_ptr<IController> controller_;
 			public:

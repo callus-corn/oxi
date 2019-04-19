@@ -2,6 +2,7 @@
 #include <memory>
 #include "Dxlib.h"
 #include "../../i_controller.hpp"
+#include "../../game_const.hpp"
 #include "../i_position.hpp"
 #include "object_kind.hpp"
 #include "image_resources.hpp"
@@ -29,9 +30,16 @@ void oxi::scene::object::MockObject::run()
 	{
 		position_->addX(-oxi::scene::object::ObjectConst::move_speed);
 	}
-	if (input.at(KEY_INPUT_UP) > 0)
+	if (input.at(KEY_INPUT_UP) == 1 )
 	{
-		position_->addY(-oxi::scene::object::ObjectConst::gravity-oxi::scene::object::ObjectConst::move_speed);
+		frame_++;
+	}
+
+	if (frame_ > 0)
+	{
+		auto delta = -(oxi::scene::object::ObjectConst::jump_verocity-frame_);
+		position_->addY(delta);
+		frame_++;
 	}
 }
 
@@ -50,7 +58,8 @@ void oxi::scene::object::MockObject::collision()
 	{
 		if (collision == oxi::scene::object::ObjectKind::ground) 
 		{
-			position_->addY(-oxi::scene::object::ObjectConst::gravity);
+			position_->moveTo(position_->getX(), oxi::GameConst::window_y - oxi::scene::object::ObjectConst::unit_y * 4);
+			frame_ = 0;
 		}
 	}
 	position_->resetCollisions();

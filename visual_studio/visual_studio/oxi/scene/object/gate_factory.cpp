@@ -1,4 +1,5 @@
 #include "gate_factory.hpp"
+#include "../../game_const.hpp"
 #include "../i_gate.hpp"
 #include "../scene_const.hpp"
 #include "position.hpp"
@@ -19,7 +20,7 @@ std::vector<std::shared_ptr<oxi::scene::IGate>> oxi::scene::object::GateFactory:
 	}
 	else if(scene_name == oxi::scene::SceneConst::debug_scene_name)
 	{
-		auto position = std::make_shared<Position>(0, 0, oxi::scene::object::ObjectConst::unit_x*4, oxi::scene::object::ObjectConst::unit_y*4);
+		auto position = std::make_shared<Position>(oxi::GameConst::window_x - oxi::scene::object::ObjectConst::unit_x * 4, oxi::GameConst::window_y/2, oxi::scene::object::ObjectConst::unit_x*4, oxi::scene::object::ObjectConst::unit_y*4);
 		std::vector<std::shared_ptr<oxi::scene::IGate>> gates
 		{
 			std::make_shared<MockGate>(position)
