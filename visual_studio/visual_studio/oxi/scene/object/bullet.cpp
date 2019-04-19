@@ -5,9 +5,10 @@
 #include "image_resources.hpp"
 #include "object_const.hpp"
 
-oxi::scene::object::Bullet::Bullet(std::shared_ptr<IPosition> position)
+oxi::scene::object::Bullet::Bullet(std::shared_ptr<IPosition> position,int move_speed)
 	:position_(position),
-	kind_(oxi::scene::object::ObjectKind::bullet)
+	kind_(oxi::scene::object::ObjectKind::bullet),
+	move_speed_(move_speed)
 {
 	image_ = LoadGraph(oxi::scene::object::ImageResources::mock_bullet);
 }
@@ -15,7 +16,7 @@ oxi::scene::object::Bullet::Bullet(std::shared_ptr<IPosition> position)
 void oxi::scene::object::Bullet::run()
 {
 	frame_++;
-	position_->addX(oxi::scene::object::ObjectConst::move_speed*2);
+	position_->addX(move_speed_*2);
 	if (frame_ > 60)
 	{
 		disposable_ = true;

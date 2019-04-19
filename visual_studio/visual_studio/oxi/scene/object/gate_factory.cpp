@@ -19,7 +19,7 @@ std::vector<std::shared_ptr<oxi::scene::IGate>> oxi::scene::object::GateFactory:
 	}
 	else if(scene_name == oxi::scene::SceneConst::debug_scene_name)
 	{
-		auto position = std::make_shared<Position>(0, 0, oxi::scene::object::ObjectConst::unit_x*2, oxi::scene::object::ObjectConst::unit_y);
+		auto position = std::make_shared<Position>(0, 0, oxi::scene::object::ObjectConst::unit_x*4, oxi::scene::object::ObjectConst::unit_y*4);
 		std::vector<std::shared_ptr<oxi::scene::IGate>> gates
 		{
 			std::make_shared<MockGate>(position)

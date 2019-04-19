@@ -19,10 +19,10 @@ std::vector<std::shared_ptr<oxi::scene::ISpawn>> oxi::scene::object::SpawnFactor
 	else if(scene_name == oxi::scene::SceneConst::debug_scene_name)
 	{
 		auto background_position = std::make_shared<Position>(0, 0, 0, 0);
-		auto ground_position = std::make_shared<Position>(0, oxi::GameConst::window_y-oxi::scene::object::ObjectConst::unit_y/2, oxi::GameConst::window_x, oxi::scene::object::ObjectConst::unit_y / 2);
-		auto object_position = std::make_shared<Position>(0, oxi::GameConst::window_y/2, oxi::scene::object::ObjectConst::unit_x, oxi::scene::object::ObjectConst::unit_y);
+		auto ground_position = std::make_shared<Position>(0, oxi::GameConst::window_y-oxi::scene::object::ObjectConst::unit_y*2, oxi::GameConst::window_x, oxi::scene::object::ObjectConst::unit_y*2);
+		auto object_position = std::make_shared<Position>(oxi::GameConst::window_x/4, oxi::GameConst::window_y/2, oxi::scene::object::ObjectConst::unit_x, oxi::scene::object::ObjectConst::unit_y*2);
 		auto bullet_position = object_position;
-		auto enemy_position = std::make_shared<Position>(oxi::GameConst::window_x/2, oxi::GameConst::window_y/2, oxi::scene::object::ObjectConst::unit_x, oxi::scene::object::ObjectConst::unit_y);
+		auto enemy_position = std::make_shared<Position>(oxi::GameConst::window_x*3/4, oxi::GameConst::window_y/2, oxi::scene::object::ObjectConst::unit_x, oxi::scene::object::ObjectConst::unit_y*2);
 		std::vector<std::shared_ptr<ISpawn>> spawns
 		{
 			std::make_shared<SpawnMockBackGround>(background_position),

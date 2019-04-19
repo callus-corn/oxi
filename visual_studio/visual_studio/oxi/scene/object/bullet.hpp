@@ -13,12 +13,13 @@ namespace oxi
 			private:
 				int image_;
 				std::shared_ptr<IPosition> position_;
+				int move_speed_;
 				int kind_;
 				bool disposable_{false};
 				int frame_{0};
 
 			public:
-				explicit Bullet(std::shared_ptr<IPosition> position);
+				explicit Bullet(std::shared_ptr<IPosition> position,int move_speed);
 				void run() override;
 				void collisionStore(std::shared_ptr<IPosition> position, int kind) override;
 				void collision() override;
