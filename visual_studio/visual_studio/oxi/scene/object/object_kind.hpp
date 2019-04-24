@@ -15,6 +15,8 @@ namespace oxi
 				static const int gate;
 				static const int back_ground;
 				static const int camera;
+				static const int wall;
+				static const int spawn;
 			};
 		}
 	}

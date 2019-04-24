@@ -147,7 +147,9 @@
     <ClCompile Include="oxi\scene\object\spawn_mock_enemy.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_mock_ground.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_mock_object.cpp" />
+    <ClCompile Include="oxi\scene\object\spawn_wall.cpp" />
     <ClCompile Include="oxi\scene\object\title_back.cpp" />
+    <ClCompile Include="oxi\scene\object\wall.cpp" />
     <ClCompile Include="oxi\scene\play_ground_scene.cpp" />
     <ClCompile Include="oxi\scene\scene_const.cpp" />
     <ClCompile Include="oxi\scene\scene_factory.cpp" />
@@ -188,7 +190,9 @@
     <ClInclude Include="oxi\scene\object\spawn_mock_ground.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_mock_object.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_mock_enemy.hpp" />
+    <ClInclude Include="oxi\scene\object\spawn_wall.hpp" />
     <ClInclude Include="oxi\scene\object\title_back.hpp" />
+    <ClInclude Include="oxi\scene\object\wall.hpp" />
     <ClInclude Include="oxi\scene\play_ground_scene.hpp" />
     <ClInclude Include="oxi\scene\scene_const.hpp" />
     <ClInclude Include="oxi\scene\scene_factory.hpp" />

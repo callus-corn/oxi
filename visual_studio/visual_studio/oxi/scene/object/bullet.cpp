@@ -36,7 +36,7 @@ void oxi::scene::object::Bullet::collision()
 	auto collisions = position_->getCollisions();
 	for (auto collision : collisions)
 	{
-		if (collision == oxi::scene::object::ObjectKind::enemy)
+		if (collision == oxi::scene::object::ObjectKind::wall)
 		{
 			disposable_ = true;
 		}

@@ -53,6 +53,7 @@ void oxi::scene::object::MockObject::collisionStore(std::shared_ptr<IPosition> p
 
 void oxi::scene::object::MockObject::collision()
 {
+	auto input = controller_->getInput();
 	auto collisions = position_->getCollisions();
 	for (auto collision : collisions)
 	{
@@ -60,6 +61,14 @@ void oxi::scene::object::MockObject::collision()
 		{
 			position_->moveTo(position_->getX(), oxi::GameConst::window_y - oxi::scene::object::ObjectConst::unit_y * 4);
 			frame_ = 0;
+		}
+		if (collision == oxi::scene::object::ObjectKind::wall && input.at(KEY_INPUT_RIGHT) > 0)
+		{
+			position_->addX(-oxi::scene::object::ObjectConst::move_speed);
+		}
+		if (collision == oxi::scene::object::ObjectKind::wall && input.at(KEY_INPUT_LEFT) > 0)
+		{
+			position_->addX(oxi::scene::object::ObjectConst::move_speed);
 		}
 	}
 	position_->resetCollisions();
