@@ -5,7 +5,7 @@
 oxi::scene::object::SpawnMockObject::SpawnMockObject(std::shared_ptr<IPosition> position, std::shared_ptr<IController> controller)
 	:position_(position),
 	controller_(controller),
-	kind_(oxi::scene::object::ObjectKind::back_ground)
+	kind_(oxi::scene::object::ObjectKind::spawn)
 {
 }
 

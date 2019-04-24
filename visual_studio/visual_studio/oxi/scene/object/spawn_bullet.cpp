@@ -9,7 +9,7 @@
 oxi::scene::object::SpawnBullet::SpawnBullet(std::shared_ptr<IPosition> position,std::shared_ptr<IController> controller)
 	:position_(position),
 	controller_(controller),
-	kind_(oxi::scene::object::ObjectKind::back_ground),
+	kind_(oxi::scene::object::ObjectKind::spawn),
 	move_speed_(oxi::scene::object::ObjectConst::move_speed)
 {
 }

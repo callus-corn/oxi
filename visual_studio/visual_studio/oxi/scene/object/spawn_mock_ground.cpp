@@ -4,7 +4,7 @@
 
 oxi::scene::object::SpawnMockGround::SpawnMockGround(std::shared_ptr<IPosition> position)
 	:position_(position),
-	kind_(oxi::scene::object::ObjectKind::back_ground)
+	kind_(oxi::scene::object::ObjectKind::spawn)
 {
 }
 

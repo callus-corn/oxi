@@ -18,7 +18,6 @@ namespace oxi
 				MockBackGround(std::shared_ptr<IPosition> position);
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getKind() override { return kind_; }
-				bool isDisposable() override { return false; }
 				int getImage() { return image_; }
 			};
 		}

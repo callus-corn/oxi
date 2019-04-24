@@ -22,7 +22,6 @@ namespace oxi
 				void collision() override;
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getKind() override { return kind_; }
-				bool isDisposable() { return false; }
 				int getImage() { return image_; }
 				bool isOpen() override { return !next_scene_name_.empty(); };
 				std::string getNextSceneName() override { return next_scene_name_; };
