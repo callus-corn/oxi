@@ -10,8 +10,3 @@ oxi::scene::object::MockBackGround::MockBackGround(std::shared_ptr<IPosition> po
 {
 	image_ = LoadGraph(oxi::scene::object::ImageResources::mock_background);
 }
-
-void oxi::scene::object::MockBackGround::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(), image_, 0);
-}

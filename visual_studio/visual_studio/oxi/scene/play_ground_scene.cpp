@@ -4,10 +4,12 @@
 #include "i_object.hpp"
 #include "i_spawn.hpp"
 #include "i_gate.hpp"
+#include "i_camera.hpp"
 
-oxi::scene::PlayGroundScene::PlayGroundScene(std::vector<std::shared_ptr<ISpawn>> spawns, std::vector<std::shared_ptr<IGate>> gates)
+oxi::scene::PlayGroundScene::PlayGroundScene(std::vector<std::shared_ptr<ISpawn>> spawns, std::vector<std::shared_ptr<IGate>> gates, std::shared_ptr<ICamera> camera)
 	:spawns_(spawns),
-	gates_(gates)
+	gates_(gates),
+	camera_(camera)
 {
 	for (auto spawn : spawns)
 	{
@@ -17,6 +19,7 @@ oxi::scene::PlayGroundScene::PlayGroundScene(std::vector<std::shared_ptr<ISpawn>
 	{
 		objects_.push_back(gate);
 	}
+	objects_.push_back(camera);
 }
 
 void oxi::scene::PlayGroundScene::run()
@@ -49,19 +52,17 @@ void oxi::scene::PlayGroundScene::run()
 	auto new_end = std::remove_if(objects_.begin(), objects_.end(), [](auto object) {return object->isDisposable();});
 	objects_.erase(new_end, objects_.end());
 
-	ClearDrawScreen();
-	SetDrawScreen(DX_SCREEN_BACK);
 
+	camera_->ready();
 	for (auto object : objects_)
 	{
-		object->draw();
+		camera_->render(object->getPosition(),object->getImage(),object->getKind());
 	}
 	for (auto gate : gates_)
 	{
-		gate->draw();
+		camera_->render(gate->getPosition(),gate->getImage(),gate->getKind());
 	}
-
-	ScreenFlip();
+	camera_->refresh();
 
 	for (auto gate : gates_) 
 	{

@@ -43,8 +43,3 @@ void oxi::scene::object::Bullet::collision()
 	}
 	position_->resetCollisions();
 }
-
-void oxi::scene::object::Bullet::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(), image_, 0);
-}

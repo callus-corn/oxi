@@ -48,8 +48,3 @@ void oxi::scene::object::MockEnemy::collision()
 	}
 	position_->resetCollisions();
 }
-
-void oxi::scene::object::MockEnemy::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(), image_, 0);
-}

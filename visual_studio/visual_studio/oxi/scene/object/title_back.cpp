@@ -27,11 +27,6 @@ void oxi::scene::object::TitleBack::run()
 	}
 }
 
-void oxi::scene::object::TitleBack::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(),image_,0);
-}
-
 bool oxi::scene::object::TitleBack::isOpen()
 {
 	return !next_scene_name.empty();

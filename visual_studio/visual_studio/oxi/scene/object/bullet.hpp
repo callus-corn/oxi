@@ -26,7 +26,7 @@ namespace oxi
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getKind() override { return kind_; }
 				bool isDisposable() { return disposable_; }
-				void draw() override;
+				int getImage() override { return image_; }
 			};
 		}
 	}

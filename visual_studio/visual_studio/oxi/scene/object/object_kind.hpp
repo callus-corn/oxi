@@ -14,6 +14,7 @@ namespace oxi
 				static const int bullet;
 				static const int gate;
 				static const int back_ground;
+				static const int camera;
 			};
 		}
 	}

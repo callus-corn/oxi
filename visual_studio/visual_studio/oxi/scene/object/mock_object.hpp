@@ -27,7 +27,7 @@ namespace oxi
 				void collisionStore(std::shared_ptr<IPosition> position,int kind) override;
 				void collision() override;
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
-				void draw() override;
+				int getImage() { return image_; }
 				bool isDisposable() override { return false; }
 				int getKind() override { return kind_; }
 			};

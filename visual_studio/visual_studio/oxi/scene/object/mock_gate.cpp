@@ -32,8 +32,3 @@ void oxi::scene::object::MockGate::collision()
 	}
 	position_->resetCollisions();
 }
-
-void oxi::scene::object::MockGate::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(), image_, 0);
-}

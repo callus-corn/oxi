@@ -23,7 +23,7 @@ namespace oxi
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getKind() override { return kind_; }
 				bool isDisposable() { return false; }
-				void draw() override;
+				int getImage() { return image_; }
 				bool isOpen() override { return !next_scene_name_.empty(); };
 				std::string getNextSceneName() override { return next_scene_name_; };
 			};

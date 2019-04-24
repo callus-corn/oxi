@@ -64,8 +64,3 @@ void oxi::scene::object::MockObject::collision()
 	}
 	position_->resetCollisions();
 }
-
-void oxi::scene::object::MockObject::draw()
-{
-	DrawGraph(position_->getX(), position_->getY(), image_, 0);
-}
