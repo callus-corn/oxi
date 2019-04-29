@@ -134,7 +134,7 @@
     <ClCompile Include="oxi\scene\object\gate_factory.cpp" />
     <ClCompile Include="oxi\scene\object\mock_background.cpp" />
     <ClCompile Include="oxi\scene\object\mock_gate.cpp" />
-    <ClCompile Include="oxi\scene\object\spawn_bullet.cpp" />
+    <ClCompile Include="oxi\scene\object\gun.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_factory.cpp" />
     <ClCompile Include="oxi\scene\object\image_resources.cpp" />
     <ClCompile Include="oxi\scene\object\mock_enemy.cpp" />
@@ -175,7 +175,7 @@
     <ClInclude Include="oxi\scene\object\gate_factory.hpp" />
     <ClInclude Include="oxi\scene\object\mock_background.hpp" />
     <ClInclude Include="oxi\scene\object\mock_gate.hpp" />
-    <ClInclude Include="oxi\scene\object\spawn_bullet.hpp" />
+    <ClInclude Include="oxi\scene\object\gun.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_factory.hpp" />
     <ClInclude Include="oxi\scene\object\image_resources.hpp" />
     <ClInclude Include="oxi\scene\i_spawn_factory.hpp" />

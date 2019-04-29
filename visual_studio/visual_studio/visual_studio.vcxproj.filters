@@ -26,12 +26,12 @@
     <ClCompile Include="oxi\scene\object\spawn_mock_enemy.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_mock_background.cpp" />
     <ClCompile Include="oxi\scene\object\bullet.cpp" />
-    <ClCompile Include="oxi\scene\object\spawn_bullet.cpp" />
     <ClCompile Include="oxi\scene\object\mock_background.cpp" />
     <ClCompile Include="oxi\scene\object\camera.cpp" />
     <ClCompile Include="oxi\scene\object\camera_factory.cpp" />
     <ClCompile Include="oxi\scene\object\wall.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_wall.cpp" />
+    <ClCompile Include="oxi\scene\object\gun.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oxi\game.hpp" />
@@ -67,7 +67,6 @@
     <ClInclude Include="oxi\scene\object\spawn_mock_enemy.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_mock_background.hpp" />
     <ClInclude Include="oxi\scene\object\bullet.hpp" />
-    <ClInclude Include="oxi\scene\object\spawn_bullet.hpp" />
     <ClInclude Include="oxi\scene\object\mock_background.hpp" />
     <ClInclude Include="oxi\scene\i_camera.hpp" />
     <ClInclude Include="oxi\scene\object\camera.hpp" />
@@ -75,5 +74,6 @@
     <ClInclude Include="oxi\scene\object\camera_factory.hpp" />
     <ClInclude Include="oxi\scene\object\wall.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_wall.hpp" />
+    <ClInclude Include="oxi\scene\object\gun.hpp" />
   </ItemGroup>
 </Project>

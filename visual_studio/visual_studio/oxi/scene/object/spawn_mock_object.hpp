@@ -14,15 +14,17 @@ namespace oxi
 			{
 			private:
 				int kind_;
+				bool creatable_{ true };
 				std::shared_ptr<IController> controller_;
 				std::shared_ptr<IPosition> position_;
-				bool creatable_{ true };
+				std::shared_ptr<IPosition> player_position_;
+				std::shared_ptr<IObject> player_;
 			public:
-				SpawnMockObject(std::shared_ptr<IPosition> position, std::shared_ptr<IController> controller);
+				SpawnMockObject(std::shared_ptr<IPosition> player_position, std::shared_ptr<IController> controller);
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getKind() override { return kind_; }
 				bool isDisposable() override { return false; }
-				bool isCreatable() override { return creatable_; }
+				bool isCreatable() override;
 				std::shared_ptr<IObject> create() override;
 			};
 		}

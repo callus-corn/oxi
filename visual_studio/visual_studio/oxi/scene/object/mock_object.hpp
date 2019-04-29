@@ -19,6 +19,7 @@ namespace oxi
 				int image_;
 				int kind_;
 				int frame_{0};
+				bool disposable_{false};
 				std::shared_ptr<IPosition> position_;
 				std::shared_ptr<IController> controller_;
 			public:
@@ -28,7 +29,7 @@ namespace oxi
 				void collision() override;
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				int getImage() { return image_; }
-				bool isDisposable() override { return false; }
+				bool isDisposable() override { return disposable_; }
 				int getKind() override { return kind_; }
 			};
 		}

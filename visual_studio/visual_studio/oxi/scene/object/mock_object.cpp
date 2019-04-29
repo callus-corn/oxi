@@ -70,6 +70,10 @@ void oxi::scene::object::MockObject::collision()
 		{
 			position_->addX(oxi::scene::object::ObjectConst::move_speed);
 		}
+		if (collision == oxi::scene::object::ObjectKind::enemy)
+		{
+			disposable_ = true;
+		}
 	}
 	position_->resetCollisions();
 }

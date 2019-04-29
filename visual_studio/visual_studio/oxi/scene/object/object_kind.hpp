@@ -17,6 +17,7 @@ namespace oxi
 				static const int camera;
 				static const int wall;
 				static const int spawn;
+				static const int gun;
 			};
 		}
 	}
