@@ -2,14 +2,21 @@
 #include "Dxlib.h"
 #include "../i_position.hpp"
 #include "image_resources.hpp"
+#include "sound_resources.hpp"
 #include "object_kind.hpp"
 #include "object_const.hpp"
+
+namespace
+{
+	int death_sound_;
+}
 
 oxi::scene::object::MockEnemy::MockEnemy(std::shared_ptr<IPosition> position)
 	:position_(position),
 	kind_(oxi::scene::object::ObjectKind::enemy)
 {
 	image_ = LoadGraph(oxi::scene::object::ImageResources::mock_enemy);
+	death_sound_ = LoadSoundMem(oxi::scene::object::SoundResources::death);
 }
 
 void oxi::scene::object::MockEnemy::run()
@@ -44,6 +51,7 @@ void oxi::scene::object::MockEnemy::collision()
 		if (collision == oxi::scene::object::ObjectKind::bullet)
 		{
 			disposable_ = true;
+			PlaySoundMem(death_sound_, DX_PLAYTYPE_BACK);
 		}
 	}
 	position_->resetCollisions();

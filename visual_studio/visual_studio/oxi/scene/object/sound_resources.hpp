@@ -11,6 +11,7 @@ namespace oxi
 			struct SoundResources
 			{
 				static const TCHAR* title_back;
+				static const TCHAR* death;
 			};
 		}
 	}

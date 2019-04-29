@@ -6,7 +6,13 @@
 #include "../i_position.hpp"
 #include "object_kind.hpp"
 #include "image_resources.hpp"
+#include "sound_resources.hpp"
 #include "object_const.hpp"
+
+namespace 
+{
+	int death_sound_;
+}
 
 oxi::scene::object::MockObject::MockObject(std::shared_ptr<oxi::scene::IPosition> position, std::shared_ptr<oxi::IController> controller)
 	:position_(position),
@@ -14,6 +20,7 @@ oxi::scene::object::MockObject::MockObject(std::shared_ptr<oxi::scene::IPosition
 	kind_(oxi::scene::object::ObjectKind::player)
 {
 	image_ = LoadGraph(oxi::scene::object::ImageResources::mock_object);
+	death_sound_ = LoadSoundMem(oxi::scene::object::SoundResources::death);
 }
 
 void oxi::scene::object::MockObject::run()
@@ -73,6 +80,7 @@ void oxi::scene::object::MockObject::collision()
 		if (collision == oxi::scene::object::ObjectKind::enemy)
 		{
 			disposable_ = true;
+			PlaySoundMem(death_sound_, DX_PLAYTYPE_BACK);
 		}
 	}
 	position_->resetCollisions();
