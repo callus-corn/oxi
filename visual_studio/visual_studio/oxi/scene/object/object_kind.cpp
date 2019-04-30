@@ -10,3 +10,5 @@ const int oxi::scene::object::ObjectKind::camera = 7;
 const int oxi::scene::object::ObjectKind::wall = 8;
 const int oxi::scene::object::ObjectKind::spawn = 9;
 const int oxi::scene::object::ObjectKind::gun = 10;
+const int oxi::scene::object::ObjectKind::animation = 11;
+const int oxi::scene::object::ObjectKind::corpse = 12;

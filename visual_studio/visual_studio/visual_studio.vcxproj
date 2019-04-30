@@ -128,9 +128,13 @@
     <ClCompile Include="oxi\game.cpp" />
     <ClCompile Include="oxi\game_const.cpp" />
     <ClCompile Include="oxi\main.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_death.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_defeat.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_resources.cpp" />
     <ClCompile Include="oxi\scene\object\bullet.cpp" />
     <ClCompile Include="oxi\scene\object\camera.cpp" />
     <ClCompile Include="oxi\scene\object\camera_factory.cpp" />
+    <ClCompile Include="oxi\scene\object\corpse.cpp" />
     <ClCompile Include="oxi\scene\object\gate_factory.cpp" />
     <ClCompile Include="oxi\scene\object\mock_background.cpp" />
     <ClCompile Include="oxi\scene\object\mock_gate.cpp" />
@@ -169,9 +173,13 @@
     <ClInclude Include="oxi\scene\i_object.hpp" />
     <ClInclude Include="oxi\scene\i_position.hpp" />
     <ClInclude Include="oxi\scene\i_spawn.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_death.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_defeat.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_resources.hpp" />
     <ClInclude Include="oxi\scene\object\bullet.hpp" />
     <ClInclude Include="oxi\scene\object\camera.hpp" />
     <ClInclude Include="oxi\scene\object\camera_factory.hpp" />
+    <ClInclude Include="oxi\scene\object\corpse.hpp" />
     <ClInclude Include="oxi\scene\object\gate_factory.hpp" />
     <ClInclude Include="oxi\scene\object\mock_background.hpp" />
     <ClInclude Include="oxi\scene\object\mock_gate.hpp" />

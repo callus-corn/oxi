@@ -15,7 +15,7 @@ namespace oxi
 		const std::shared_ptr<IController> controller_;
 	public:
 		explicit Game(std::shared_ptr<ISceneFactory> scene_factory, std::shared_ptr<IController> controller);
-		virtual ~Game();
+		virtual ~Game() {}
 		void start();
 	};
 }

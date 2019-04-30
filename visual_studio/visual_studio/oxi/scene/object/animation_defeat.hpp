@@ -9,18 +9,18 @@ namespace oxi
 	{
 		namespace object
 		{
-			class SpawnMockEnemy :public ISpawn
+			class AnimationDefeat :public ISpawn
 			{
 			private:
 				int kind_;
-				int frame_{0};
-				bool creatable_{ true };
+				int direction_;
+				bool creatable_{ false };
 				std::shared_ptr<IPosition> position_;
-				std::shared_ptr<std::vector<std::shared_ptr<IPosition>>> enemy_positions_;
+				std::shared_ptr<std::vector<std::shared_ptr<IPosition>>> object_positions_;
 			public:
-				explicit SpawnMockEnemy(std::shared_ptr<IPosition> position, std::shared_ptr<std::vector<std::shared_ptr<IPosition>>> enemy_positions);
+				explicit AnimationDefeat(std::shared_ptr<std::vector<std::shared_ptr<IPosition>>> object_positions, int direction);
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
-				void run() override;
+				void collision() override;
 				int getKind() override { return kind_; }
 				bool isDisposable() override { return false; }
 				bool isCreatable() override { return creatable_; }

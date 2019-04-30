@@ -13,13 +13,12 @@ namespace oxi
 			{
 			private:
 				int kind_;
-				int move_speed_;
 				bool active_{true};
 				std::shared_ptr<IPosition> position_;
-				std::shared_ptr<IPosition> player_position_;
+				std::shared_ptr<IPosition> object_position_;
 				std::shared_ptr<IController> controller_;
 			public:
-				Gun(std::shared_ptr<IPosition> player_position, std::shared_ptr<IController> controller);
+				explicit Gun(std::shared_ptr<IPosition> object_position, std::shared_ptr<IController> controller);
 				std::shared_ptr<IPosition> getPosition() override { return position_; }
 				void run() override;
 				void collisionStore(std::shared_ptr<IPosition> position, int kind) override;

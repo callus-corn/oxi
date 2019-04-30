@@ -18,6 +18,8 @@ namespace oxi
 				static const int wall;
 				static const int spawn;
 				static const int gun;
+				static const int animation;
+				static const int corpse;
 			};
 		}
 	}

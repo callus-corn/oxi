@@ -10,20 +10,16 @@ oxi::Game::Game(std::shared_ptr<ISceneFactory> scene_factory, std::shared_ptr<IC
 	:scene_factory_(scene_factory),
 	controller_(controller)
 {
-	SetMainWindowText(oxi::GameConst::title_name);
-	ChangeWindowMode(TRUE);
-	SetGraphMode(oxi::GameConst::window_x, oxi::GameConst::window_y, oxi::GameConst::color_depth);
-	SetWindowSizeChangeEnableFlag(FALSE);
-}
-
-oxi::Game::~Game() 
-{
-	DxLib_End();
 }
 
 void oxi::Game::start()
 {
+	SetOutApplicationLogValidFlag(FALSE);
 	if (DxLib_Init() == -1) { return; }
+	SetMainWindowText(oxi::GameConst::title_name);
+	ChangeWindowMode(TRUE);
+	SetGraphMode(oxi::GameConst::window_x, oxi::GameConst::window_y, oxi::GameConst::color_depth);
+	SetWindowSizeChangeEnableFlag(FALSE);
 
 	std::shared_ptr<IScene> scene = scene_factory_->create(oxi::scene::SceneConst::title_scene_name);
 
@@ -36,4 +32,6 @@ void oxi::Game::start()
 			scene = scene_factory_->create(scene->getNextSceneName());
 		}
 	}
+
+	DxLib_End();
 }

@@ -5,3 +5,5 @@ const int oxi::scene::object::ObjectConst::jump_verocity = 35;
 const int oxi::scene::object::ObjectConst::move_speed = 20;
 const int oxi::scene::object::ObjectConst::unit_x = 40;
 const int oxi::scene::object::ObjectConst::unit_y = 40;
+const int oxi::scene::object::ObjectConst::up = -1;
+const int oxi::scene::object::ObjectConst::down = 1;

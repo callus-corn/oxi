@@ -32,6 +32,10 @@
     <ClCompile Include="oxi\scene\object\wall.cpp" />
     <ClCompile Include="oxi\scene\object\spawn_wall.cpp" />
     <ClCompile Include="oxi\scene\object\gun.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_death.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_resources.cpp" />
+    <ClCompile Include="oxi\scene\object\corpse.cpp" />
+    <ClCompile Include="oxi\scene\object\animation_defeat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oxi\game.hpp" />
@@ -75,5 +79,9 @@
     <ClInclude Include="oxi\scene\object\wall.hpp" />
     <ClInclude Include="oxi\scene\object\spawn_wall.hpp" />
     <ClInclude Include="oxi\scene\object\gun.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_death.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_resources.hpp" />
+    <ClInclude Include="oxi\scene\object\corpse.hpp" />
+    <ClInclude Include="oxi\scene\object\animation_defeat.hpp" />
   </ItemGroup>
 </Project>
